@@ -27,6 +27,6 @@ reports = worksheet.get(RANGE_NAME)
 # Pass the 7th element (google sheet id) of the first row to the allowCollaboration function
 # for report in reports[:4]:
 for report in reports:
-  if len(report) > 8 and report[8] == "To Do":
+  if len(report) > 9 and report[9] == "To Do":
     allowCollaboration(report[6])
-    worksheet.update_cell(reports.index(report) + 2, 9, "Done")
+    worksheet.update_cell(reports.index(report) + 2, 10, "Done")
